@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import me from './menu-con.jpg';
+import React from 'react';
+import './App.css'; 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="container">
+      <div className="profile-section">
+        <img src={me} alt="Ethan Smith" className="profile-image" />
+        <h1>Ethan Smith</h1>
+        <p className="education">Computer Science at the University of Nottingham</p>
+      </div>
+      <div className="social-media-links">
+        <a href="https://www.linkedin.com/in/eethansmith/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-linkedin"></i> LinkedIn
         </a>
-      </header>
+        <a href="https://www.instagram.com/eethansmith/?hl=en" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://github.com/eethansmith" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-github"></i> GitHub
+        </a>
+      </div>
     </div>
   );
 }
