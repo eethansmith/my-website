@@ -8,7 +8,7 @@ function App() {
       <div className="profile-section">
         <img src={me} alt="Ethan Smith" className="profile-image" />
         <h1>Ethan Smith</h1>
-        <p className="education">Computer Science at the University of Nottingham</p>
+        <p className="education">Computer Science at the University of Nottingham (BSc)</p>
       </div>
       <div className="social-media-links">
         <a href="https://www.linkedin.com/in/eethansmith/" target="_blank" rel="noopener noreferrer">
@@ -23,6 +23,7 @@ function App() {
       </div>
     </div>
   );
+  
 }
 
 export default App;
