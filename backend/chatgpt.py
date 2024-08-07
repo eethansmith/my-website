@@ -11,3 +11,7 @@ query = sys.argv[1]
 print(query)
 
 loader = TextLoader('data.txt')
+
+index = VectorstoreIndexCreator().from_loaders([loader])
+
+print (index.query(query))
