@@ -1,0 +1,13 @@
+Internships:
+BT - Security Software Engineer (Lead the development and deployment of a Rust-deployed Border Gateway Protocol (BGP) route reader tool. Produced a functioning API for the rapid reader allowing data analysts within the team to provide functionality to the routing. Implemented my own Packet Visualisation tool that utilised the developed Rapid Reader API to give)
+Microsoft - Cloud Solutions Architect (Proposed architectural redesigns for multiple customers, contributing to Azure Security Architecture Assessments. Collaborated closely with security researchers on the development of Security Co-Pilot, gaining deep insights into AI/ML functionality in security contexts. Developed expertise in Kusto Query Language (KQL), mastering cloud querying fundamentals.Earned the Microsoft Certified: Security, Compliance, and Identity Fundamentals certification.)
+QinetiQ - AI Deveopment and Deployment (Developed and integrated AI capabilities into a cyber threat intelligence platform, enhancing user interaction with data at scale and improving analysis efficiency for Security Operations. Contributed in the development of an AI conversational model tailored for high-security environments. Communicating with structured and unstructured)
+
+Cyber First: 
+CyberFirst Summer Courses Experience
+National Cyber Security Centre   Aug 2017 – Jul 2019
+– Engaged in a series of specialised cybersecurity courses facilitated by the National
+Cyber Security Centre (NCSC) over three consecutive summers.
+– Gained invaluable hands-on experience with technical labs, lectures by leading
+industry professionals, enhancing my skills in both hardware and software security.
+Each summer from 2017-2019
