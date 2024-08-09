@@ -42,6 +42,12 @@ function App() {
           <img src={me} alt="Ethan Smith" className="profile-image" />
           <h1>Ethan Smith</h1>
           <p className="education">Computer Science at the University of Nottingham</p>
+          <div className="logo-section">
+            <img src={CyberFirstLogo} alt="CyberFirst" className="logo" />
+            <img src={BTLogo} alt="BT" className="logo" />
+            <img src={MicrosoftLogo} alt="Microsoft" className="logo" />
+            <img src={QinetiQLogo} alt="QinetiQ" className="logo" />
+          </div>
         </div>
       </div>
 

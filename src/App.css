@@ -96,17 +96,23 @@ h1 {
   color: #ddd;
 }
 
-.internship-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px; /* Space between logos */
-  margin-top: 20px; /* Space between education text and logos */
+.container {
+  text-align: center;
 }
 
-.internship-logo {
-  height: 60px; /* Set a consistent height for all logos */
-  object-fit: contain; /* Ensure logos maintain aspect ratio */
+.logo-section {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .below-the-fold {
