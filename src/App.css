@@ -10,6 +10,8 @@ body {
   text-align: center;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
 .container {
   display: flex;
   flex-direction: column;
@@ -31,6 +33,14 @@ body {
 h1 {
   font-size: 2em;
   margin: 10px 0;
+}
+
+.brand {
+  font-family: 'Roboto Mono', monospace; /* Use a robotic font */
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left; /* Align the brand text to the left */
+  margin-right: auto; /* Pushes the brand to the left */
 }
 
 .education {
@@ -63,20 +73,20 @@ h1 {
   width: 100%;
   background-color: #333;
   padding: 10px 20px;
-
-  padding-left: 0px;
+  display: flex; /* Make header a flex container */
+  align-items: center;
 }
 
 .nav {
   display: flex;
   justify-content: flex-end;
-  
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
+  padding-right: 30px; /* Add some padding to the right */
 }
 
 .nav-links a {
@@ -85,19 +95,15 @@ h1 {
   font-size: 18px;
   display: flex;
   align-items: center;
+  padding-left: 5px; /* Adjust padding if necessary */
 }
 
 .nav-links a i {
   margin-right: 8px;
-  
 }
 
 .nav-links a:hover {
   color: #ddd;
-}
-
-.container {
-  text-align: center;
 }
 
 .logo-section {
@@ -121,7 +127,6 @@ h1 {
   background-color: #f0f0f0;
 }
 
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .profile-image {
@@ -129,7 +134,7 @@ h1 {
   }
 
   h1 {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 
   .nav-links a {
@@ -137,9 +142,16 @@ h1 {
   }
 }
 
-
 @media (max-width: 480px) {
   .nav-links a {
     font-size: 14px;
+  }
+
+  .header {
+    padding: 10px; /* Reduce padding for small screens */
+  }
+
+  .brand {
+    font-size: 20px; /* Adjust font size of brand for small screens */
   }
 }

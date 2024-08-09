@@ -12,6 +12,9 @@ function App() {
   return (
     <div className="app">
       <header className="header">
+      <div className="brand">
+          eethansmith
+        </div>
         <nav className="nav">
           <ul className="nav-links">
             <li>
