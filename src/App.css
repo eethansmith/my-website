@@ -5,9 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1a1a1a; /* Dark background color */
-  color: #fafafa;
+  background-color: #1a1a1a; /* Initial background color */
+  color: #fafafa; /* Initial font color */
   text-align: center;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
@@ -41,6 +42,7 @@ h1 {
   font-weight: bold;
   text-align: left; /* Align the brand text to the left */
   margin-right: auto; /* Pushes the brand to the left */
+  color: #fafafa; /* Keep this color white */
 }
 
 .education {
