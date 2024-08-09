@@ -1,7 +1,9 @@
 import React from 'react';
 import me from './menu-con.jpg';
-import BTLogo from './BT_logo.svg';
-import CyberFirstLogo from './CyberFirst-Logo.png';
+import BTLogo from './BT_logo.jpg';
+import MicrosoftLogo from './Microsoft_logo.jpg';
+import QinetiQLogo from './QinetiQ_logo.jpg';
+import CyberFirstLogo from './CyberFirst_logo.jpg';
 import './App.css';
 
 function App() {
