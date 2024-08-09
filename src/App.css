@@ -123,6 +123,25 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.divider {
+  width: 80%; /* Adjust the width as needed */
+  height: 2px; /* Height of the line */
+  background-color: currentColor; /* Use the current font color */
+  margin: 20px auto; /* Center the line and add margin above/below */
+  border-radius: 1px; /* Slightly round the edges of the line */
+  margin-top: 15%; /* Adjust the margin as needed */
+}
+
+/* Typing effect section */
+.typing-section {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  margin-top: -10px; /* Adjust to control when it appears */
+}
+
 .below-the-fold {
   margin-top: 100vh; /* Push the content by the height of the viewport */
   padding: 20px;

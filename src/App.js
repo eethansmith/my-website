@@ -8,6 +8,19 @@ import QinetiQLogo from './QinetiQ_logo.jpg';
 
 import './App.css';
 
+function TypingEffect({ text, scrollY, startScroll }) {
+  const [displayedText, setDisplayedText] = useState('');
+
+  useEffect(() => {
+    if (scrollY >= startScroll) {
+      const textLength = Math.min(Math.floor((scrollY - startScroll) / 15), text.length);
+      setDisplayedText(text.slice(0, textLength));
+    }
+  }, [scrollY, startScroll, text]);
+
+  return <h2>{displayedText}</h2>;
+}
+
 function App() {
   const [scrollY, setScrollY] = useState(0);
 
@@ -84,7 +97,13 @@ function App() {
             <img src={MicrosoftLogo} alt="Microsoft" className="logo" />
             <img src={QinetiQLogo} alt="QinetiQ" className="logo" />
           </div>
+          <div className="divider"></div>
         </div>
+      </div>
+
+      {/* Typing Effect Section */}
+      <div className="typing-section">
+        <TypingEffect text="Cyber First" scrollY={scrollY} startScroll={400} />
       </div>
 
       {/* This is the section that will be outside of the initial view */}
