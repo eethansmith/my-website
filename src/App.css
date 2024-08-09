@@ -16,6 +16,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding-top: 80px; /* Ensure content is below the fixed header */
 }
 
 .profile-section {
@@ -37,6 +38,7 @@ h1 {
   margin-bottom: 5px;
 }
 
+/* Social media links in profile section */
 .social-media-links a {
   color: #fafafa;
   text-decoration: none;
@@ -54,12 +56,84 @@ h1 {
   text-decoration: underline;
 }
 
+/* Header styles */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px;
+
+  padding-left: 0px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fafafa;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a i {
+  margin-right: 8px;
+  
+}
+
+.nav-links a:hover {
+  color: #ddd;
+}
+
+.internship-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between logos */
+  margin-top: 20px; /* Space between education text and logos */
+}
+
+.internship-logo {
+  height: 60px; /* Set a consistent height for all logos */
+  object-fit: contain; /* Ensure logos maintain aspect ratio */
+}
+
+.below-the-fold {
+  margin-top: 100vh; /* Push the content by the height of the viewport */
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .profile-image {
     max-width: 35%;
   }
 
   h1 {
-    font-size: 1.5em;
+    font-size: 1em;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .nav-links a {
+    font-size: 14px;
   }
 }
