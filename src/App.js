@@ -1,9 +1,11 @@
 import React from 'react';
 import me from './menu-con.jpg';
+import CyberFirstLogo from './CyberFirst_logo.jpg';
+import NottinghamLogo from './Nottingham_logo.jpg';
 import BTLogo from './BT_logo.jpg';
 import MicrosoftLogo from './Microsoft_logo.jpg';
 import QinetiQLogo from './QinetiQ_logo.jpg';
-import CyberFirstLogo from './CyberFirst_logo.jpg';
+
 import './App.css';
 
 function App() {
