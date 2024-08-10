@@ -46,7 +46,7 @@ function App() {
   };
 
   const startColor = [26, 26, 26]; // #1a1a1a in RGB
-  const endColor = [250, 250, 250]; // #fafafa in RGB
+  const endColor = [240, 240, 240]; // #fafafa in RGB
   const startFontColor = [250, 250, 250]; // #fafafa in RGB
   const endFontColor = [0, 0, 0]; // #000000 in RGB
   const factor = Math.min(scrollY / 600, 1); // adjust the denominator for sensitivity
@@ -97,6 +97,10 @@ function App() {
             <img src={BTLogo} alt="BT" className="logo" />
             <img src={MicrosoftLogo} alt="Microsoft" className="logo" />
             <img src={QinetiQLogo} alt="QinetiQ" className="logo" />
+          </div>
+          {/* Add Resume Button Below Logos */}
+          <div className="resume-button">
+            <button onClick={() => window.open('./Ethan_Smit_CV.pdf', '_blank')}>Resume</button>
           </div>
           <div className="divider"></div>
           <div className="typing-section">
