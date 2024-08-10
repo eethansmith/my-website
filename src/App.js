@@ -5,7 +5,7 @@ import NottinghamLogo from './Nottingham_logo.jpg';
 import BTLogo from './BT_logo.jpg';
 import MicrosoftLogo from './Microsoft_logo.jpg';
 import QinetiQLogo from './QinetiQ_logo.jpg';
-import Imperial_College from './Imperial_College.jpg';
+/*import Imperial_College from './Imperial_College.jpg';*/
 
 import './App.css';
 
@@ -100,8 +100,8 @@ function App() {
           </div>
           <div className="divider"></div>
           <div className="typing-section">
-              <TypingEffect text="Cyber First" scrollY={scrollY} startScroll={20} />
-            </div>
+            <TypingEffect text="Cyber First" scrollY={scrollY} startScroll={20} />
+          </div>
         </div>
       </div>
       {/* This is the section that will be outside of the initial view */}
