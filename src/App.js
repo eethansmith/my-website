@@ -198,8 +198,8 @@ function App() {
       </div>
       {/* This is the section that will be outside of the initial view */}
       <div className="below-the-fold">
-        <h2>More Information</h2>
-        <p>This content is initially out of view and requires scrolling to see.</p>
+        <h2>Work in progress 🤖 Hold tight!</h2>
+        <p>This page is still a work in progress! To see my projects go to my GitHub for now!</p>
       </div>
     </div>
   );

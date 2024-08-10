@@ -30,7 +30,7 @@ body {
   max-width: 50%;
   max-height: 1%; /* Set a maximum height */
   width: auto; /* Maintain aspect ratio */
-  height: auto; /* Maintain aspect ratio */
+  height: auto; 
   border-radius: 50%;
 }
 
@@ -53,24 +53,6 @@ h1 {
   font-style: italic;
   font-weight: bold;
   margin-bottom: 5px;
-}
-
-/* Social media links in profile section */
-.social-media-links a {
-  color: #fafafa;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.social-media-links i {
-  margin-right: 8px;
-  width: 25px; 
-  text-align: center;
-}
-
-.social-media-links a:hover {
-  text-decoration: underline;
 }
 
 /* Header styles */
