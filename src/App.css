@@ -19,7 +19,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding-top: 30px; /* Ensure content is below the fixed header */
+  padding-top: 80px; /* Ensure content is below the fixed header */
 }
 
 .profile-section {
@@ -141,7 +141,6 @@ h1 {
   font-size: 2em;
   margin-top: 5%; /* Adjust to control when it appears */
 }
-
 
 .below-the-fold {
   margin-top: 100vh; /* Push the content by the height of the viewport */
