@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import me from './menu-con.jpg';
 import CyberFirstLogo from './CyberFirst_logo.jpg';
-import NottinghamLogo from './Nottingham_logo.jpg';
+
 import BTLogo from './BT_logo.jpg';
 import MicrosoftLogo from './Microsoft_logo.jpg';
 import QinetiQLogo from './QinetiQ_logo.jpg';
@@ -22,8 +22,45 @@ function TypingEffect({ text, scrollY, startScroll }) {
   return <h2>{displayedText}</h2>;
 }
 
+const CompanyDescription = ({ hoveredCompany }) => {
+  let description = '';
+
+  switch (hoveredCompany) {
+    case 'CyberFirst':
+      description = 'At CyberFirst, I worked on developing secure applications...';
+      break;
+    case 'BT':
+      description = 'At BT, I was involved in network infrastructure projects...';
+      break;
+    case 'Microsoft':
+      description = 'During my time at Microsoft, I contributed to software development...';
+      break;
+    case 'QinetiQ':
+      description = 'At QinetiQ, I was part of a team working on defense technologies...';
+      break;
+    default:
+      description = '';
+  }
+
+  return (
+    <div className={`company-description ${hoveredCompany ? 'visible' : ''}`}>
+      {description && <p>{description}</p>}
+    </div>
+  );
+};
+
+
 function App() {
   const [scrollY, setScrollY] = useState(0);
+  const [hoveredCompany, setHoveredCompany] = useState(null);
+
+  const handleMouseEnter = (company) => {
+    setHoveredCompany(company);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredCompany(null);
+  };
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
@@ -92,20 +129,46 @@ function App() {
           <p className="education">Computer Science at the University of Nottingham</p>
 
           <div className="logo-section">
-            <img src={CyberFirstLogo} alt="CyberFirst" className="logo" />
-            <img src={NottinghamLogo} alt="Nottingham" className="logo" />
-            <img src={BTLogo} alt="BT" className="logo" />
-            <img src={MicrosoftLogo} alt="Microsoft" className="logo" />
-            <img src={QinetiQLogo} alt="QinetiQ" className="logo" />
+            <img
+              src={CyberFirstLogo}
+              alt="CyberFirst"
+              className="logo"
+              onMouseEnter={() => handleMouseEnter('CyberFirst')}
+              onMouseLeave={handleMouseLeave}
+            />
+            <img
+              src={BTLogo}
+              alt="BT"
+              className="logo"
+              onMouseEnter={() => handleMouseEnter('BT')}
+              onMouseLeave={handleMouseLeave}
+            />
+            <img
+              src={MicrosoftLogo}
+              alt="Microsoft"
+              className="logo"
+              onMouseEnter={() => handleMouseEnter('Microsoft')}
+              onMouseLeave={handleMouseLeave}
+            />
+            <img
+              src={QinetiQLogo}
+              alt="QinetiQ"
+              className="logo"
+              onMouseEnter={() => handleMouseEnter('QinetiQ')}
+              onMouseLeave={handleMouseLeave}
+            />
           </div>
+          {/* Display the description below the logos */}
+          <CompanyDescription hoveredCompany={hoveredCompany} />
           {/* Add Resume Button Below Logos */}
           <div className="resume-button">
             <button onClick={() => window.open('./Ethan_Smith_CV.pdf', '_blank')}>Resume</button>
           </div>
           <div className="divider"></div>
           <div className="typing-section">
-            <TypingEffect text="Cyber First" scrollY={scrollY} startScroll={20} />
+            <TypingEffect text="Programming Projects" scrollY={scrollY} startScroll={20} />
           </div>
+          <div className="divider"></div>
         </div>
       </div>
       {/* This is the section that will be outside of the initial view */}
