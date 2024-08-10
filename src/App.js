@@ -100,7 +100,7 @@ function App() {
           </div>
           {/* Add Resume Button Below Logos */}
           <div className="resume-button">
-            <button onClick={() => window.open('./Ethan_Smit_CV.pdf', '_blank')}>Resume</button>
+            <button onClick={() => window.open('./Ethan_Smith_CV.pdf', '_blank')}>Resume</button>
           </div>
           <div className="divider"></div>
           <div className="typing-section">

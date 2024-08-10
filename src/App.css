@@ -19,7 +19,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding-top: 80px; /* Ensure content is below the fixed header */
+  padding-top: 15%; /* Ensure content is below the fixed header */
 }
 
 .profile-section {
@@ -129,7 +129,7 @@ h1 {
   background-color: currentColor; /* Use the current font color */
   margin: 20px auto; /* Center the line and add margin above/below */
   border-radius: 1px; /* Slightly round the edges of the line */
-  margin-top: 15%; /* Adjust the margin as needed */
+  margin-top: 5%; /* Adjust the margin as needed */
 }
 
 /* Typing effect section */
@@ -140,6 +140,33 @@ h1 {
   align-items: center;
   font-size: 2em;
   margin-top: 5%; /* Adjust to control when it appears */
+}
+
+.resume-button {
+  margin-top: 5%; /* Adjust the margin as needed */
+}
+
+.resume-button button {
+  background-color: transparent;
+  color: inherit; /* Use the current font color */
+  border: 2px solid currentColor; /* Outline using the current font color */
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.resume-button button:hover {
+  background-color: currentColor; /* Background changes to the current font color */
+  color: #fafafa; /* Text color changes to the initial font color */
+}
+
+.resume-button button:focus {
+  outline: none;
+}
+
+.resume-button a {
+  text-decoration: none;
 }
 
 .below-the-fold {
