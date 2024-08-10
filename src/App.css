@@ -19,7 +19,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding-top: 80px; /* Ensure content is below the fixed header */
+  padding-top: 30px; /* Ensure content is below the fixed header */
 }
 
 .profile-section {
