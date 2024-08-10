@@ -9,6 +9,29 @@ import QinetiQLogo from './QinetiQ_logo.jpg';
 
 import './App.css';
 
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    const targetPosition = element.getBoundingClientRect().top + window.scrollY;
+    const startPosition = window.scrollY;
+    const distance = targetPosition - startPosition;
+    const duration = 2000; // Duration in milliseconds (2 seconds)
+    let start = null;
+
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = timestamp - start;
+      const percent = Math.min(progress / duration, 1);
+      window.scrollTo(0, startPosition + distance * percent);
+      if (progress < duration) {
+        window.requestAnimationFrame(step);
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  }
+};
+
 function TypingEffect({ text, scrollY, startScroll }) {
   const [displayedText, setDisplayedText] = useState(' ');
 
@@ -27,16 +50,16 @@ const CompanyDescription = ({ hoveredCompany }) => {
 
   switch (hoveredCompany) {
     case 'CyberFirst':
-      description = 'At CyberFirst, I worked on developing secure applications...';
+      description = 'Sponsered by the CyberFirst Bursary Scheme throught University.';
       break;
     case 'BT':
-      description = 'At BT, I was involved in network infrastructure projects...';
+      description = 'Developed Security Tooling as a Intern Software Engineer @ BT.';
       break;
     case 'Microsoft':
-      description = 'During my time at Microsoft, I contributed to software development...';
+      description = 'Cloud Solution Architect Intern @ Microsoft UK';
       break;
     case 'QinetiQ':
-      description = 'At QinetiQ, I was part of a team working on defense technologies...';
+      description = 'Deployed AI/ML Solutions in multiple projects as a FDSE @ QinetiQ.';
       break;
     default:
       description = '';
@@ -99,11 +122,11 @@ function App() {
         </div>
         <nav className="nav">
           <ul className="nav-links">
-            <li>
-              <a href="#portfolio">
-                <i className="fas fa-briefcase"></i> Projects
-              </a>
-            </li>
+          <li>
+            <a href="#portfolio" onClick={() => scrollToSection('programming-projects')}>
+              <i className="fas fa-wrench"></i> Projects
+            </a>
+          </li>
             <li>
               <a href="https://www.linkedin.com/in/eethansmith/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-linkedin"></i> LinkedIn
@@ -157,13 +180,15 @@ function App() {
               onMouseEnter={() => handleMouseEnter('QinetiQ')}
               onMouseLeave={handleMouseLeave}
             />
-          </div>
-          {/* Display the description below the logos */}
-          <CompanyDescription hoveredCompany={hoveredCompany} />
-          {/* Add Resume Button Below Logos */}
-          <div className="resume-button">
-            <button onClick={() => window.open('./Ethan_Smith_CV.pdf', '_blank')}>Resume</button>
-          </div>
+            </div>
+            {/* Display the description below the logos */}
+            <CompanyDescription hoveredCompany={hoveredCompany} />
+            {/* Add Resume Button Below Logos */}
+            <div id="programming-projects" className="resume-button">
+              <button onClick={() => window.open('./Ethan_Smith_CV.pdf', '_blank')}>
+              Resume <i className="fas fa-newspaper"></i>
+              </button>
+            </div>
           <div className="divider"></div>
           <div className="typing-section">
             <TypingEffect text="Programming Projects" scrollY={scrollY} startScroll={20} />
