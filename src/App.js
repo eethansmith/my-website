@@ -5,6 +5,7 @@ import NottinghamLogo from './Nottingham_logo.jpg';
 import BTLogo from './BT_logo.jpg';
 import MicrosoftLogo from './Microsoft_logo.jpg';
 import QinetiQLogo from './QinetiQ_logo.jpg';
+import Imperial_College from './Imperial_College.jpg';
 
 import './App.css';
 
@@ -13,7 +14,7 @@ function TypingEffect({ text, scrollY, startScroll }) {
 
   useEffect(() => {
     if (scrollY >= startScroll) {
-      const textLength = Math.min(Math.floor((scrollY - startScroll) / 15), text.length);
+      const textLength = Math.min(Math.floor((scrollY - startScroll) / 10), text.length);
       setDisplayedText(text.slice(0, textLength));
     }
   }, [scrollY, startScroll, text]);
@@ -98,13 +99,21 @@ function App() {
             <img src={QinetiQLogo} alt="QinetiQ" className="logo" />
           </div>
           <div className="divider"></div>
+          <div className="typing-section">
+              <TypingEffect text="Cyber First" scrollY={scrollY} startScroll={400} />
+            </div>
         </div>
       </div>
 
       {/* Typing Effect Section */}
-      <div className="typing-section">
-        <TypingEffect text="Cyber First" scrollY={scrollY} startScroll={400} />
-      </div>
+      <div className="two-column-layout"></div>
+            {/* Left Column */}
+            <div className="left-column">
+            {/* Right Column */}
+            <div className="right-column">
+              <img src={Imperial_College} alt="Imperial College" />
+            </div>
+          </div>
 
       {/* This is the section that will be outside of the initial view */}
       <div className="below-the-fold">
