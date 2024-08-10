@@ -99,18 +99,9 @@ function App() {
             <img src={QinetiQLogo} alt="QinetiQ" className="logo" />
           </div>
           <div className="divider"></div>
-          <div className="image">
-        <div className="content-wrapper">
-          <div className="text-section">
-            <div className="typing-section">
+          <div className="typing-section">
               <TypingEffect text="Cyber First" scrollY={scrollY} startScroll={20} />
             </div>
-          </div>
-          <div className="image-section">
-            <img src={Imperial_College} alt="Imeperial College London" className="image-right" />
-          </div>
-        </div>
-      </div>
         </div>
       </div>
       {/* This is the section that will be outside of the initial view */}
